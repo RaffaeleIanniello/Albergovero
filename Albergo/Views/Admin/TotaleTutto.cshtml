@@ -1,0 +1,19 @@
+﻿@using Albergo.Models
+@{
+    ViewBag.Title = "TotaleTutto";
+    Prenotazione p = ViewBag.Prenotazione;
+    int Servizi = ViewBag.Servizi;
+
+}
+
+<h2>TotaleTutto</h2>
+<div>
+    <p>Tariffa : @p.TariffaApplicata</p>
+    <p>Caparra: @p.CaparraConfirmatoria</p>
+    <p>Servizi: @Servizi</p>
+    <p>
+        Totale: @(p.TariffaApplicata - p.CaparraConfirmatoria + Servizi);
+    </p>
+
+</div>
+
